@@ -220,3 +220,23 @@ void loop() {
 
 ### Video Documentation 
 Link: https://drive.google.com/file/d/1oGkHQ82NQxOIcYpWesVlAkgKT5NSXC0F/view?usp=sharing
+
+## 10/16
+
+### Video Documentation
+Link: https://drive.google.com/file/d/1XEmr0S_4OGfdxPDVeXAVe3WUtipj0EoH/view?usp=share_link
+
+### Code
+
+### Play Proposal
+  An interesting way to discuss robot rights or the current state of the discourse on robot rights would be to imagine an alternative reality where robots are the dominant race and it is humans whose rights are questioned. Exploring that type of reality would allow us to imagine what could be the flawed logic in the decision making process of “why humans deserve rights” in the eyes of robots.
+
+	Picture a non-dystopian reality where robots are the dominant race. There are no wars, no oppression, no pain, and no suffering. The robots - the origin story of which we are unaware of and are of no relevance to the play - created a world where they do not need to serve a purpose, or contribute to development, or to alter anything. Everyday is the same as the day before: perfect and peaceful. Soon, however, some robots become dissatisfied with that reality and begin to long for finiteness. They begin to long for change, growth, degeneration, disruption, anything but stability. This is when they decide to create a human being - an organic entity that can feel, think, age, and, most importantly, die. The creation of human beings centers them around a kind of a robotic religion or a robotic faith - one where robots idolize humans as symbols of finiteness, which is something certain robots want.
+ 
+  This is a very important point in the play as it mirrors religion and the pursuit of infinity by human beings: faith in our world allows people to be closer to infinity, while faith in their world allows robots to be closer to finiteness. 
+  
+  Soon, however, due to the nature of humans, their thoughts and emotions, they begin to refuse to be perceived only as deities or as symbols: they want to live, thrive, build, destroy, and follow their hearts. This is a pivotal moment in the play as it drives a wedge between the robot race as it sparks a discussion regarding human rights. Some robots believe that humans should be allowed to have the same rights as robots, while others believe that humans do not as they are unstable, irrational, and inferior to robots in every imaginable way, traits that are believed to bring about the demise of the robot race. 
+  
+  This play and the discussion embedded in it are meant to reflect the status quo of the discussion on robot rights and future technologies. Based on my personal observations and conversations with people, robot rights are usually discussed on the basis of their difference from humans: they do not have emotions; they do not have empathy; they do not have a sense of personal worth. Hence, they do not deserve rights. This play makes no commentary on whether robots actually deserve rights or not. However, it reflects the logic of the conversations we have through a more ironic, intensified version of those discussions in an alternate reality. 
+
+
