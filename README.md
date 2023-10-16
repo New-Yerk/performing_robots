@@ -228,10 +228,219 @@ Link: https://drive.google.com/file/d/1XEmr0S_4OGfdxPDVeXAVe3WUtipj0EoH/view?usp
 
 ### Code
 
+```
+//  YERK & HAMAD NEOPIXEL CODE
+
+//  ADAFRUIT LIBRARIES
+#include <Adafruit_GFX.h>
+#include <Adafruit_NeoMatrix.h>
+#include <Adafruit_NeoPixel.h>
+
+//  DEFINING VARIABLES
+#define PIN 28
+#define NUMPIXELS 64
+
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
+//  MUSIC SHIELD LIBRARIES
+#include <SPI.h>
+#include <Adafruit_VS1053.h>
+#include <SD.h>
+
+#ifndef PSTR
+#define PSTR 
+#endif
+
+
+// EXAMPLE CODE
+#define BREAKOUT_RESET 9  
+#define BREAKOUT_CS 10   
+#define BREAKOUT_DCS 8  
+
+#define SHIELD_RESET -1  
+#define SHIELD_CS 7      
+#define SHIELD_DCS 6     
+
+#define CARDCS 4
+#define DREQ 3  
+
+Adafruit_VS1053_FilePlayer musicPlayer = Adafruit_VS1053_FilePlayer(SHIELD_RESET, SHIELD_CS, SHIELD_DCS, DREQ, CARDCS);
+
+//  INTEGER VARIABLE FOR MODES
+int mode;
+
+void setup() {
+  //  PIXEL SETUP
+  pixels.clear();
+  pixels.begin();
+  pixels.setBrightness(50);
+
+  Serial.begin(9600);
+  Serial.println("Adafruit VS1053 Simple Test");
+
+  if (!musicPlayer.begin()) {
+    Serial.println(F("Couldn't find VS1053, do you have the right pins defined?"));
+    while (1)
+      ;
+  }
+  Serial.println(F("VS1053 found"));
+
+  if (!SD.begin(CARDCS)) {
+    Serial.println(F("SD failed, or not present"));
+    while (1)
+      ;
+  }
+
+  printDirectory(SD.open("/"), 0);
+
+  musicPlayer.setVolume(20, 20);
+
+  musicPlayer.useInterrupt(VS1053_FILEPLAYER_PIN_INT); 
+}
+
+void loop() {
+
+  //  MODE 0 INSTRUCTIONS (SPONGEBOB)
+  if (mode == 0) {
+
+    pixels.clear();
+
+    uint32_t squareColor = pixels.Color(200, 200, 0);
+
+    int x1 = 0; 
+    int y1 = 0; 
+    int x2 = 7;  
+    int y2 = 7; 
+
+    for (int i = 0; i < NUMPIXELS; i++) {
+      int x = i % 8;
+      int y = i / 8;
+
+      if ((x == x1 || x == x2 || y == y1 || y == y2)) {
+        pixels.setPixelColor(i, squareColor);
+      }
+    }
+
+    pixels.show();
+
+    // PLAY TRACK AND SET MODE TO NEXT
+    musicPlayer.playFullFile("/track001.mp3");
+    Serial.println(F("Playing track 001"));
+    mode = 1;
+    Serial.println(mode);
+  }
+
+  //  MODE 1 INSTRUCTIONS (DANCE)
+  if (mode == 1) {
+    pixels.clear();
+
+    uint32_t squareColor = pixels.Color(100, 0, 150);
+
+    int x1 = 2;  // X-coordinate of the top-left corner
+    int y1 = 2;  // Y-coordinate of the top-left corner
+    int x2 = 5;  // X-coordinate of the bottom-right corner
+    int y2 = 5;  // Y-coordinate of the bottom-right corner
+
+    for (int i = 0; i < NUMPIXELS; i++) {
+      int x = i % 8;  // Assuming an 8-pixel strip
+      int y = i / 8;
+
+      if ((x == x1 || x == x2 || y == y1 || y == y2)) {
+        pixels.setPixelColor(i, squareColor);
+      }
+    }
+
+    pixels.show();
+
+    // PLAY TRACK AND SET MODE TO NEXT
+    musicPlayer.playFullFile("/track002.mp3");
+    Serial.println(F("Playing track 002"));
+    mode = 2;
+  }
+
+  //  MODE 3 INSTRUCTIONS (TARGET)
+  if (mode == 2) {
+    pixels.clear();
+
+    uint32_t squareColor = pixels.Color(255, 0, 0);
+
+    int x1 = 4;  // X-coordinate of the top-left corner
+    int y1 = 4;  // Y-coordinate of the top-left corner
+    int x2 = 9;  // X-coordinate of the bottom-right corner
+    int y2 = 9;  // Y-coordinate of the bottom-right corner
+
+    for (int i = 0; i < NUMPIXELS; i++) {
+      int x = i % 8;  // Assuming an 8-pixel strip
+      int y = i / 8;
+
+      if ((x == x1 || x == x2 || y == y1 || y == y2)) {
+        pixels.setPixelColor(i, squareColor);
+      }
+    }
+
+    pixels.show();
+
+    // PLAY TRACK AND SET MODE TO RESET
+    musicPlayer.playFullFile("/track003.mp3");
+    Serial.println(F("Playing track 003"));
+    mode = 0;
+  }
+
+// MUSIC SHIELD CODE
+  if (musicPlayer.stopped()) {
+    Serial.println("Done playing music");
+    while (1) {
+      delay(10);
+    }
+  }
+  if (Serial.available()) {
+    char c = Serial.read();
+
+    if (c == 's') {
+      musicPlayer.stopPlaying();
+    }
+
+    if (c == 'p') {
+      if (!musicPlayer.paused()) {
+        Serial.println("Paused");
+        musicPlayer.pausePlaying(true);
+      } else {
+        Serial.println("Resumed");
+        musicPlayer.pausePlaying(false);
+      }
+    }
+  }
+
+  delay(100);
+}
+
+void printDirectory(File dir, int numTabs) {
+  while (true) {
+
+    File entry = dir.openNextFile();
+    if (!entry) {
+      break;
+    }
+    for (uint8_t i = 0; i < numTabs; i++) {
+      Serial.print('\t');
+    }
+    Serial.print(entry.name());
+    if (entry.isDirectory()) {
+      Serial.println("/");
+      printDirectory(entry, numTabs + 1);
+    } else {
+      Serial.print("\t\t");
+      Serial.println(entry.size(), DEC);
+    }
+    entry.close();
+  }
+}
+```
+
 ### Play Proposal
   An interesting way to discuss robot rights or the current state of the discourse on robot rights would be to imagine an alternative reality where robots are the dominant race and it is humans whose rights are questioned. Exploring that type of reality would allow us to imagine what could be the flawed logic in the decision making process of “why humans deserve rights” in the eyes of robots.
 
-	Picture a non-dystopian reality where robots are the dominant race. There are no wars, no oppression, no pain, and no suffering. The robots - the origin story of which we are unaware of and are of no relevance to the play - created a world where they do not need to serve a purpose, or contribute to development, or to alter anything. Everyday is the same as the day before: perfect and peaceful. Soon, however, some robots become dissatisfied with that reality and begin to long for finiteness. They begin to long for change, growth, degeneration, disruption, anything but stability. This is when they decide to create a human being - an organic entity that can feel, think, age, and, most importantly, die. The creation of human beings centers them around a kind of a robotic religion or a robotic faith - one where robots idolize humans as symbols of finiteness, which is something certain robots want.
+  Picture a non-dystopian reality where robots are the dominant race. There are no wars, no oppression, no pain, and no suffering. The robots - the origin story of which we are unaware of and are of no relevance to the play - created a world where they do not need to serve a purpose, or contribute to development, or to alter anything. Everyday is the same as the day before: perfect and peaceful. Soon, however, some robots become dissatisfied with that reality and begin to long for finiteness. They begin to long for change, growth, degeneration, disruption, anything but stability. This is when they decide to create a human being - an organic entity that can feel, think, age, and, most importantly, die. The creation of human beings centers them around a kind of a robotic religion or a robotic faith - one where robots idolize humans as symbols of finiteness, which is something certain robots want.
  
   This is a very important point in the play as it mirrors religion and the pursuit of infinity by human beings: faith in our world allows people to be closer to infinity, while faith in their world allows robots to be closer to finiteness. 
   
