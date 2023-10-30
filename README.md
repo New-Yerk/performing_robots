@@ -449,3 +449,17 @@ void printDirectory(File dir, int numTabs) {
   This play and the discussion embedded in it are meant to reflect the status quo of the discussion on robot rights and future technologies. Based on my personal observations and conversations with people, robot rights are usually discussed on the basis of their difference from humans: they do not have emotions; they do not have empathy; they do not have a sense of personal worth. Hence, they do not deserve rights. This play makes no commentary on whether robots actually deserve rights or not. However, it reflects the logic of the conversations we have through a more ironic, intensified version of those discussions in an alternate reality. 
 
 
+## Final Robot Design
+
+### Photo
+
+![WhatsApp Image 2023-10-30 at 02 48 39](https://github.com/New-Yerk/performing_robots/assets/78387567/f3d93955-cf4d-4f7d-bd85-b88435e1fadc)
+
+### Additional information 
+
+- NeoPixel Rings: [Watch the video](https://www.youtube.com/watch?v=0Kk29P_ICfE)
+- 8X8 LED Matrix Eye Program
+- Rotational to Linear Movement Mechanism:
+  * [Watch the video](https://www.youtube.com/shorts/DHGlCAkIB14) 
+  * [Watch the video](https://www.youtube.com/shorts/99YMdd3416I)
+
