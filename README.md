@@ -502,3 +502,9 @@ void loop() {
 
 For the next steps, we would like to work on the code in order to make sure an exact 180 degree turn. Additionally, we would like to improve the tools that lock down the pipe by decreasing the radius of the hole the pipe goes through. That way, we can ensure the pipe is not moving in an angular manner, and rather moves straight and back. 
 
+## Robot Update (13/11)
+
+For this update, we created the body of the robot. It needs some improvement as the sides are missing the necessary wooden parts and we need to continue working on the head of the robot.
+
+Additionally, we finalized the prototype of the mouth movement for the pipe mechanism. Now going forward, we will change the popsicle sticks we are using to aluminium. Additionally, we will create another layer with a hole that guides the pipe and prevents it from moving up and down. Finally, we will create holes in the wooden parts of the robot to make sure that the wires are connected to the base. 
+
