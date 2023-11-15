@@ -506,5 +506,8 @@ For the next steps, we would like to work on the code in order to make sure an e
 
 For this update, we created the body of the robot. It needs some improvement as the sides are missing the necessary wooden parts and we need to continue working on the head of the robot.
 
+![IMG_8627](https://github.com/New-Yerk/performing_robots/assets/78387567/c5590481-e2e8-44d7-9c53-683b828d97cd)
+
+
 Additionally, we finalized the prototype of the mouth movement for the pipe mechanism. Now going forward, we will change the popsicle sticks we are using to aluminium. Additionally, we will create another layer with a hole that guides the pipe and prevents it from moving up and down. Finally, we will create holes in the wooden parts of the robot to make sure that the wires are connected to the base. 
 
