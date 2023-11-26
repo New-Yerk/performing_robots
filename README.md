@@ -467,6 +467,11 @@ void printDirectory(File dir, int numTabs) {
 
 We have developed a prototype for the pipe mechanism of the robot.
 
+### Sketch of the robot base
+
+![IMG_8737](https://github.com/New-Yerk/performing_robots/assets/78387567/65426568-b699-4f1d-bf61-11f564f1531f)
+
+
 ### Video
 
 https://drive.google.com/file/d/1iz1GzKHLbYMAfzeoMEP7H2ND2HgsFnDm/view?usp=sharing
@@ -506,9 +511,34 @@ For the next steps, we would like to work on the code in order to make sure an e
 
 For this update, we created the body of the robot. It needs some improvement as the sides are missing the necessary wooden parts and we need to continue working on the head of the robot.
 
+![IMG_8736](https://github.com/New-Yerk/performing_robots/assets/78387567/6173756d-3844-43b8-a84f-33918edb3bb6)
+
+
 ![IMG_8627](https://github.com/New-Yerk/performing_robots/assets/78387567/c5590481-e2e8-44d7-9c53-683b828d97cd)
 
 While we were successfuly at creating the body, the main functionality of the robot lies in the head. As a result, we began improving and preparing that mechanism by changing the popsicle sticks in the pipe mechanism with the aluminium. 
 
 Now going forward, we will create another layer with a hole that guides the pipe and prevents it from moving up and down. Finally, we will create holes in the wooden parts of the robot to make sure that the wires are connected to the base. 
+
+## Robot Update (15/11)
+
+For this update, we changed the structure of the mechanism and added wooden pipes.
+
+![partMechanismBack](https://github.com/New-Yerk/performing_robots/assets/78387567/70bceb89-d397-4b24-9723-cbb59f663870)
+
+![partMechanismFront](https://github.com/New-Yerk/performing_robots/assets/78387567/847967b3-4c1c-4eca-a609-fcee32e1d461)
+
+Furthermore, we added the neopixels to the head of the robot.
+
+![partHead](https://github.com/New-Yerk/performing_robots/assets/78387567/f2309678-241b-4ba1-901d-9c537ba0a7ff)
+
+Our next step is to connect all the pieces together.
+
+## Robot Update (27/11)
+
+We connected all the pieces together. Along with that, we ensured the smooth movement of the robot. 
+
+https://drive.google.com/file/d/1QaYZRp200CHfvBzoGeOUdxa9_SPIIPP-/view?usp=share_link
+
+
 
