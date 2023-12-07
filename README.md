@@ -1057,5 +1057,12 @@ void setupRF24Common() {
 
 ```
 
+## Project Update (06/12)
+
+Over the past week, we faced many difficulties with our robot. The robot would keep falling down, which is why we had to extend the wooden part on the back of the robot. We accidentally damaged the radio and the H-bridge motor, which is why we had to replace them. And finally, the radio and the transmitted on the robot weren't working, which is why the boards they were attached to had to be resoldered. However, with persistence, we managed to fix all the issues, and now our robot is functioning and we are ready to implement all the states for its participation in the play.
+
+Video: https://drive.google.com/file/d/1iTT2iyWPqV-1_xf0btpR_F6FUnVKLW-N/view?usp=sharing
+
+Going forward, we still need to extend the wooden part at the frontside of the robot to ensure stability during movement. We are also planning on updating all the states to make sure that they are synchronized with the script. 
 
 
