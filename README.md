@@ -1059,10 +1059,28 @@ void setupRF24Common() {
 
 ## Project Update (06/12)
 
-Over the past week, we faced many difficulties with our robot. The robot would keep falling down, which is why we had to extend the wooden part on the back of the robot. We accidentally damaged the radio and the H-bridge motor, which is why we had to replace them. And finally, the radio and the transmitted on the robot weren't working, which is why the boards they were attached to had to be resoldered. However, with persistence, we managed to fix all the issues, and now our robot is functioning and we are ready to implement all the states for its participation in the play.
+Over the past week, we faced many difficulties with our robot. The robot would keep falling down, which is why we had to extend the wooden part on the back of the robot. 
+
+Additionally we accidentally damaged the speaker and the H-bridge motor. We connected the speaker to a power cord, ignoring its negative polarity, which resulted in it malfunctioning. We also made the mistake of not connecting our transmitter before turning on the motor, which is why the robot would begin moving on its own. We attempted to halt its movement, but that led to the motor overworking itself and burning out. As a result, we had to replace them. And finally, the radio and the transmitted on the robot weren't working, which is why the boards they were attached to had to be resoldered. However, with persistence, we managed to fix all the issues, and now our robot is functioning and we are ready to implement all the states for its participation in the play.
 
 Video: https://drive.google.com/file/d/1iTT2iyWPqV-1_xf0btpR_F6FUnVKLW-N/view?usp=sharing
 
 Going forward, we still need to extend the wooden part at the frontside of the robot to ensure stability during movement. We are also planning on updating all the states to make sure that they are synchronized with the script. 
+
+## Project Update (11/12)
+
+After finishing all the physical parts of the robot, we began updating the states. We wanted the shapes of his NeoPixels to be as expressive as his speech.
+
+By processing our own narration through LogicProX, we managed to create an electronic, yet obnoxious sound to match his personality. Then we began creating some sound effects that match his movements, such as the sound of the lighting up of the pipe. Overall, we managed to create a comprehensive set of states that captures and perfectly conveys the personality of Magnus.
+
+Link: https://drive.google.com/file/d/12xBW0PeAPfqwJ-9NpiAJzuvKLZqyLsFX/view?usp=sharing
+
+## Project Update (14/12)
+
+Our robot was perfectly ready for the play and the final elements that were missing was the decoration.
+
+We decorated our robot to resemble The Penguin from the DC comics. While decorating him, we shortened the pipe in his mouth to fit the asethetic. However, removing that weight led to unwanted consequences as the pipe was now too light and the servo motor mechansim would sink it during movement. The pipe would simply not come out without any assistance in lifting it up. To deal with that, with the help of Professor Shiloh, we propped up the pipe by using a piece of plastic. This then led to a different complication: now the pipe was too high, which would hinder its motion on the way back into the head. We fixed that by putting metal bolts inside the pipe and increasing its weight, while sealing it on both ends. The pipe finally worked as expected and we completed the decoration of our robot.
+
+
 
 
